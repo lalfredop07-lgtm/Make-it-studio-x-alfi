@@ -1,0 +1,191 @@
+{
+  "photos": {
+    "amapola-ramo": {
+      "src": "/assets/photos/amapola-ramo.webp",
+      "width": 1333,
+      "height": 2000,
+      "tint": "#b8a39f",
+      "kb": 57,
+      "origin": "FOTOS/DSC_9620.jpg"
+    },
+    "kuikku-palillos": {
+      "src": "/assets/photos/kuikku-palillos.webp",
+      "width": 1333,
+      "height": 2000,
+      "tint": "#5a463a",
+      "kb": 139,
+      "origin": "FOTOS/DSC_8399.jpg"
+    },
+    "kuikku-mesa-roja": {
+      "src": "/assets/photos/kuikku-mesa-roja.webp",
+      "width": 1333,
+      "height": 2000,
+      "tint": "#452e28",
+      "kb": 212,
+      "origin": "FOTOS/DSC_3334.jpg"
+    },
+    "kuikku-pizarra": {
+      "src": "/assets/photos/kuikku-pizarra.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#3c2723",
+      "kb": 139,
+      "origin": "FOTOS/DSC_8408.jpg"
+    },
+    "kuikku-neon": {
+      "src": "/assets/photos/kuikku-neon.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#42362b",
+      "kb": 312,
+      "origin": "FOTOS/DSC_2997.jpg"
+    },
+    "kuikku-brindis": {
+      "src": "/assets/photos/kuikku-brindis.webp",
+      "width": 1012,
+      "height": 1800,
+      "tint": "#3e2f25",
+      "kb": 190,
+      "origin": "FOTOS/DSC_3007.jpg"
+    },
+    "kuikku-nogal": {
+      "src": "/assets/photos/kuikku-nogal.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#4f4238",
+      "kb": 130,
+      "origin": "FOTOS/DSC_1938.jpg"
+    },
+    "kuikku-lounge": {
+      "src": "/assets/photos/kuikku-lounge.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#2c2924",
+      "kb": 118,
+      "origin": "FOTOS/DSC_5097.jpg"
+    },
+    "kuikku-barra": {
+      "src": "/assets/photos/kuikku-barra.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#2e2723",
+      "kb": 98,
+      "origin": "FOTOS/Copia de KUIKKU-39.jpg"
+    },
+    "expreso-barra": {
+      "src": "/assets/photos/expreso-barra.webp",
+      "width": 1333,
+      "height": 2000,
+      "tint": "#302f2f",
+      "kb": 141,
+      "origin": "FOTOS/IMG_8837.jpg"
+    },
+    "pilates-clase": {
+      "src": "/assets/photos/pilates-clase.webp",
+      "width": 1333,
+      "height": 2000,
+      "tint": "#676263",
+      "kb": 154,
+      "origin": "FOTOS/IMG_9120.jpg"
+    },
+    "mesa-parrilla": {
+      "src": "/assets/photos/mesa-parrilla.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#8d827a",
+      "kb": 176,
+      "origin": "FOTOS/DSC_4163.jpg"
+    },
+    "mesa-parrilla-detalle": {
+      "src": "/assets/photos/mesa-parrilla-detalle.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#85776f",
+      "kb": 193,
+      "origin": "FOTOS/DSC_4172.jpg"
+    },
+    "cena-pareja": {
+      "src": "/assets/photos/cena-pareja.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#605149",
+      "kb": 158,
+      "origin": "FOTOS/DSC_8897.jpg"
+    },
+    "cena-brindis": {
+      "src": "/assets/photos/cena-brindis.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#53443d",
+      "kb": 116,
+      "origin": "FOTOS/DSC_8900.jpg"
+    },
+    "cena-plato": {
+      "src": "/assets/photos/cena-plato.webp",
+      "width": 1200,
+      "height": 1800,
+      "tint": "#746861",
+      "kb": 165,
+      "origin": "FOTOS/DSC_8829.jpg"
+    },
+    "inauguracion": {
+      "src": "/assets/photos/inauguracion.webp",
+      "width": 2400,
+      "height": 1601,
+      "tint": "#302d2a",
+      "kb": 247,
+      "origin": "FOTOS/Copia de FOTO4.jpg"
+    }
+  },
+  "logos": {
+    "kuikku": {
+      "src": "/assets/logos/kuikku.png",
+      "width": 336,
+      "height": 460,
+      "ratio": 0.7304,
+      "inkDensity": 0.3408,
+      "origin": "LOGOS CLIENTES/KUIKKU.png"
+    },
+    "yupick": {
+      "src": "/assets/logos/yupick.png",
+      "width": 460,
+      "height": 228,
+      "ratio": 2.0175,
+      "inkDensity": 0.263,
+      "origin": "LOGOS CLIENTES/logoyupick1600x1600.png"
+    },
+    "amapola": {
+      "src": "/assets/logos/amapola.png",
+      "width": 460,
+      "height": 87,
+      "ratio": 5.2874,
+      "inkDensity": 0.0834,
+      "origin": "LOGOS CLIENTES/AMAPOLA.png"
+    },
+    "expreso": {
+      "src": "/assets/logos/expreso.png",
+      "width": 460,
+      "height": 216,
+      "ratio": 2.1296,
+      "inkDensity": 0.2353,
+      "origin": "LOGOS CLIENTES/ExPreso_Logos7.png"
+    },
+    "reganadientes": {
+      "src": "/assets/logos/reganadientes.png",
+      "width": 460,
+      "height": 111,
+      "ratio": 4.1441,
+      "inkDensity": 0.1915,
+      "origin": "LOGOS CLIENTES/7A2A64F5-ED9B-49EB-9DD9-9C05E4DC718F.png"
+    }
+  },
+  "video": {},
+  "brand": {
+    "logo": {
+      "src": "/assets/brand/makeit-logo.png",
+      "width": 937,
+      "height": 399,
+      "ratio": 2.3484
+    }
+  }
+}

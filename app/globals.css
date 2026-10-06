@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   MAKE IT STUDIO — DESIGN SYSTEM
+   Paleta y tipografía derivadas de la guía de marca real (makeit_studio_2.ai):
+   Times New Roman (principal) + Gotham Book Italic (secundaria).
+   En web: Instrument Serif (display, mismo ADN transicional e itálica marcada)
+   + Geist (sistema). Gotham requiere licencia comercial — ver README.
+   ========================================================================= */
+
+@theme {
+  /* --- superficies -------------------------------------------------------- */
+  --color-paper:      #f4f0e7;   /* papel cálido, base del 65% de la página   */
+  --color-paper-warm: #ede4ce;   /* crema de marca, para paneles              */
+  --color-paper-pure: #faf8f3;
+  --color-mist:       #bbc2cc;   /* azul grisáceo de marca (lockup primario)  */
+  --color-mist-deep:  #9aa4b2;
+
+  /* --- tinta -------------------------------------------------------------- */
+  /* Tres niveles, verificados contra el fondo más oscuro de los dos cremas
+     (paper-warm, el caso límite): ink 13.4 · ink-soft 6.4 · ink-faint 4.7.
+     No hay un cuarto nivel: sobre crema ya no cabe sin incumplir AA. */
+  --color-ink:        #241a17;   /* marrón espresso, nunca negro puro         */
+  --color-ink-soft:   #5c4d46;
+  --color-ink-faint:  #70615a;
+
+  /* --- acento ------------------------------------------------------------- */
+  --color-red:        #bb3427;   /* rojo exacto del logotipo                  */
+  --color-red-deep:   #5a1f18;   /* fondo de la sección declaración           */
+  --color-red-soft:   #cf6354;
+  --color-indigo:     #5d69a7;
+  --color-butter:     #f3e39a;
+
+  /* --- tipografía --------------------------------------------------------- */
+  --font-display: var(--font-serif);
+  --font-sans:    var(--font-geist);
+
+  /* --- movimiento --------------------------------------------------------- */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --rule:        color-mix(in srgb, var(--color-ink) 14%, transparent);
+  --rule-strong: color-mix(in srgb, var(--color-ink) 26%, transparent);
+  --header-h: 4.75rem;
+
+  /* escala tipográfica fluida */
+  --fs-display-xl: clamp(3.25rem, 11.2vw, 10.5rem);
+  --fs-display:    clamp(2.65rem, 7.4vw, 7.25rem);
+  --fs-h2:         clamp(2.1rem, 4.9vw, 4.75rem);
+  --fs-h3:         clamp(1.55rem, 2.5vw, 2.6rem);
+  --fs-lead:       clamp(1.125rem, 1.6vw, 1.6rem);
+  --fs-body:       clamp(0.975rem, 0.55vw + 0.78rem, 1.0625rem);
+  --fs-small:      clamp(0.8125rem, 0.4vw + 0.7rem, 0.875rem);
+  --fs-label:      clamp(0.625rem, 0.22vw + 0.57rem, 0.6875rem);
+
+  /* ritmo vertical: cada sección respira distinto, pero del mismo sistema */
+  --space-section: clamp(5.5rem, 11vw, 13rem);
+  --space-tight:   clamp(3.5rem, 6vw, 7rem);
+
+  --t-fast: 200ms;
+  --t-norm: 420ms;
+  --t-edit: 900ms;
+}
+
+/* ---------------------------------------------------------------- base ---- */
+@layer base {
+  * { min-width: 0; }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--header-h) + 1.5rem);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--fs-body);
+    line-height: 1.55;
+    letter-spacing: -0.006em;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--color-red); color: var(--color-paper); }
+
+  :focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  img, video { display: block; max-width: 100%; }
+}
+
+/* ============================================================================
+   COMPONENTES
+   Van en @layer components a propósito: así cualquier utilidad de Tailwind
+   (text-red, text-paper/60…) gana a estas clases en la cascada. Fuera de capa,
+   `.t-label { color: … }` anulaba silenciosamente los `text-*` del marcado.
+   ========================================================================= */
+@layer components {
+  /* --------------------------------------------------------- tipografía --- */
+  .t-display-xl, .t-display, .t-h2, .t-h3 {
+    font-family: var(--font-display), "Times New Roman", Times, serif;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+  .t-display-xl { font-size: var(--fs-display-xl); line-height: 0.86; letter-spacing: -0.035em; }
+  .t-display    { font-size: var(--fs-display);    line-height: 0.9;  letter-spacing: -0.03em; }
+  .t-h2         { font-size: var(--fs-h2);         line-height: 0.95; }
+  .t-h3         { font-size: var(--fs-h3);         line-height: 1.08; letter-spacing: -0.018em; }
+
+  .t-lead {
+    font-size: var(--fs-lead);
+    line-height: 1.38;
+    letter-spacing: -0.014em;
+    text-wrap: pretty;
+  }
+
+  /* etiqueta: el "Gotham Book Italic" del sistema, en versales muy espaciadas */
+  .t-label {
+    font-size: var(--fs-label);
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-ink-soft);
+  }
+  .t-caption {
+    font-size: var(--fs-label);
+    letter-spacing: 0.04em;
+    line-height: 1.45;
+    color: var(--color-ink-soft);
+    font-style: italic;
+  }
+  .t-small { font-size: var(--fs-small); line-height: 1.6; }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+
+  /* -------------------------------------------------------------- layout -- */
+  .shell {
+    width: 100%;
+    max-width: 108rem;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4.2vw, 5rem);
+  }
+
+  .grid12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: clamp(0.875rem, 1.5vw, 2rem);
+  }
+
+  .rule { border: 0; border-top: 1px solid var(--rule); }
+
+  /* ------------------------------------------------------------ textura --- */
+  /* grano de papel: casi imperceptible, nunca un overlay evidente */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image: var(--grain-url);
+    background-size: 180px 180px;
+    mix-blend-mode: multiply;
+  }
+
+  /* ------------------------------------------------------------- enlaces -- */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.1em;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 1px;
+    background: currentColor;
+    transform: scaleX(var(--sx, 0));
+    transform-origin: right;
+    transition: transform var(--t-norm) var(--ease-editorial);
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after { --sx: 1; transform-origin: left; }
+  .link-underline[data-active="true"]::after { --sx: 1; }
+
+  /* ----------------------------------------------- máscaras de logotipo --- */
+  /* Los logos se sirven como máscara alpha: se recolorean sin deformarlos. */
+  .mask {
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    -webkit-mask-position: center;  mask-position: center;
+    -webkit-mask-size: contain;     mask-size: contain;
+  }
+
+  /* El foco nunca se elimina: en los medios se dibuja como doble filete. */
+  .focus-plate:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-paper), 0 0 0 4px var(--color-red);
+  }
+
+  /* ----------------------------------------------------- scroll horizontal */
+  .hscroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .hscroll::-webkit-scrollbar { display: none; }
+}
+
+/* ------------------------------------------------- movimiento reducido ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none !important; transform: none !important; }
+}
